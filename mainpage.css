@@ -94,7 +94,5 @@ nav a#trigger::after {
 }
 
 footer {
-    display: block;
-    width: 100%;
-    bottom: 0px;
+    background-color : white;
 }
