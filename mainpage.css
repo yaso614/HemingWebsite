@@ -95,4 +95,5 @@ nav a#trigger::after {
 
 footer {
     background-color : white;
+    z-index: 0;
 }
