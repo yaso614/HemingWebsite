@@ -93,4 +93,8 @@ nav a#trigger::after {
     top: 10px;
 }
 
-
+footer {
+    display: block;
+    width: 100%;
+    bottom: 0px;
+}
