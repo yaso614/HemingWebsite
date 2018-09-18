@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('../DB3T39X.jpg');
+    background: url('DB3T39X.jpg');
     background-size: cover;
 }
 
@@ -84,7 +84,7 @@ nav a#trigger {
 
 nav a#trigger::after {
     content: "";
-    background: url('../nav.png') no-repeat;
+    background: url('nav.png') no-repeat;
     width: 30px;
     height: 30px;
     display: inline-block;
