@@ -8,16 +8,34 @@
   <title>Heming</title>
   <link rel="stylesheet" href="mainpage.css">
   <script src="jquery-3.3.1.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125789629-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-  
-      gtag('config', 'UA-125789629-1');
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125789629-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'UA-125789629-1');
+  </script>
+
+  <!-- 반응형 웹 사이트 구축 -->
+  <script>
+    $(function () {
+      var trigger = $('#trigger');
+      var menu = $('nav ul');
+      $(trigger).on('click', function (e) {
+        e.preventDefault();
+        menu.slideToggle();
+      })
+
+      $(window).resize(function () {
+        var w = $(window).width();
+        if (w > 320 && menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+  </script>
 
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
@@ -55,8 +73,17 @@
 </head>
 
 <body>
-  <h1>반응형 웹 을 만들어보자</h1>
-  <h1>소재는 고전 온라인 게임 Gersang을 대상으로 한다.</h1>
+  <nav>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">반응형1</a></li>
+      <li><a href="#">반응형2</a></li>
+      <li><a href="#">반응형3</a></li>
+      <li><a href="#">반응형4</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+    <a href="#" id="trigger">MENU</a>
+  </nav>
 </body>
 
 </html>
