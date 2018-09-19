@@ -7,11 +7,39 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="jquery-3.3.1.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" href="mainpage.css">
   <link rel="stylesheet" href="d3.css">
   <title>34기 정보</title>
 </head>
 
 <script>
+  // <!-- 반응형 웹 사이트 구축 -->
+  $(function () {
+    var trigger = $('#trigger');
+    var menu = $('nav ul');
+    $(trigger).on('click', function (e) {
+      e.preventDefault();
+      menu.slideToggle();
+    })
+
+    $('#sc34').on('click', function (e) {
+      var pw = prompt('졸업월일(하이픈(-) 없이 숫자만) ', '');
+      if (pw == 0803) {
+        console.log('입력성공');
+      } else {
+        console.log('입력실패');
+        e.preventDefault();
+      }
+    })
+
+    $(window).resize(function () {
+      var w = $(window).width();
+      if (w > 320 && menu.is(':hidden')) {
+        menu.removeAttr('style');
+      }
+    });
+  });
+
   $(function () {
     var w = 400, h = 400;
     var svg = d3.select(".chart")
@@ -118,6 +146,17 @@
 </script>
 
 <body>
+  <nav>
+    <ul>
+      <li><a href="https://yaso614.github.io/HemingWebsite/">HOME</a></li>
+      <li id="sc34"><a href="d3.html">34기 정보</a></li>
+      <li><a href="https://blog.naver.com/bkcaller">네이버블로그</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">Java</a></li>
+      <li><a href="#">Oracle</a></li>
+    </ul>
+    <a href="#" id="trigger">MENU</a>
+  </nav>
   <div id='charts'>
     <div class="chart"></div>
     <div class="chart_title"></div>
@@ -1031,25 +1070,25 @@
   <h2>문희규,이충정,정대영,정서현,이슬기,김훈희,정훈모</h2>
 
   <footer>
-      <!-- 라이브리 시티 설치 코드 -->
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTc4Ni8xNjMxMw==">
-        <script type="text/javascript">
-          (function (d, s) {
-            var j, e = d.getElementsByTagName(s)[0];
-  
-            if (typeof LivereTower === 'function') { return; }
-  
-            j = d.createElement(s);
-            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            j.async = true;
-  
-            e.parentNode.insertBefore(j, e);
-          })(document, 'script');
-        </script>
-        <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
-      </div>
-      <!-- 시티 설치 코드 끝 -->
-    </footer>
+    <!-- 라이브리 시티 설치 코드 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTc4Ni8xNjMxMw==">
+      <script type="text/javascript">
+        (function (d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+
+          if (typeof LivereTower === 'function') { return; }
+
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+      <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+    </div>
+    <!-- 시티 설치 코드 끝 -->
+  </footer>
 </body>
 
 </html>
