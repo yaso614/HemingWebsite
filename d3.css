@@ -1,0 +1,24 @@
+/* .chart div {
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
+} */
+
+.svgTest {
+    display: block;
+    text-align: right;
+    margin-right: 1px;
+    margin-left: 200px;
+    background-color: gold;
+}
+
+.chart_title {
+    display: block;
+    text-align: right;
+    margin-right: 1px;
+    margin-left: 200px;
+    background-color: gold;
+}
