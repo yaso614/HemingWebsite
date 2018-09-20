@@ -11,10 +11,9 @@
   <link rel="stylesheet" href="d3.css">
   <title>34기</title>
   <script>
-    var safety = prompt('1차 비밀번호는 안해민에게 물어보세요','');
-    if (safety != '27jz1@!zj1asda6a') {
+    var safety = prompt('졸업 월일(-)하이픈 없이 입력','');
+    if (safety != '0803') {
         location.href = "https://yaso614.github.io/HemingWebsite/"
-        console.log('암호화?');
     }
   </script>
 </head>
@@ -30,8 +29,8 @@
     })
 
     $('#sc34').on('click', function (e) {
-      var pw = prompt('1차 비밀번호는 안해민에게 물어보세요', '');
-      if (pw == '27jz1@!zj1asda6a') {
+      var pw = prompt('졸업 월일(-)하이픈 없이 입력', '');
+      if (pw == '0803') {
         console.log('입력성공');
       } else {
         console.log('입력실패');
@@ -185,7 +184,7 @@
       </div>
       <!-- 시티 설치 코드 끝 -->
     </div>
-    
+
   <div id="list">
     <div id='charts'>
       <div class="chart"></div>
