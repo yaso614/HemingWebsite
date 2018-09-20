@@ -171,7 +171,7 @@ a:link, a:hover, a:visited {
         top: 10px;
     }
     
-    footer {
+    #LiveRe {
         background-color : white;
         z-index: 0;
     }
@@ -217,7 +217,7 @@ nav a#trigger::after {
     top: 10px;
 }
 
-footer {
+#LiveRe {
     background-color : white;
     z-index: 0;
 }
@@ -262,7 +262,7 @@ nav a#trigger::after {
     top: 10px;
 }
 
-footer {
+#LiveRe {
     background-color : white;
     z-index: 0;
 }
